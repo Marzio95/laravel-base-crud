@@ -18,7 +18,7 @@ class ComicController extends Controller
         $data = [
             'myComics' => $myComics,
         ];
-        return view('comic.index', $data);
+        return view('index', $data);
     }
 
     /**
@@ -50,7 +50,10 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        //
+        return view('show', [
+            'comic' => $comic,
+            'pageTitle' => $comic->title,
+        ]);
     }
 
     /**
