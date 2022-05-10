@@ -1,1 +1,11 @@
 //
+@import " ~bootstrap/scss/bootstrap ";
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.card {
+    width: 400px;
+}
