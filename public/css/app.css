@@ -12186,6 +12186,15 @@ fieldset:disabled .btn {
   }
 }
 
-.card {
-  width: 400px;
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.card :hover {
+  color: white !important;
+}
+
+a :hover {
+  color: white !important;
 }

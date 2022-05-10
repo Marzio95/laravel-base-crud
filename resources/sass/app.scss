@@ -1,11 +1,18 @@
-//
-@import " ~bootstrap/scss/bootstrap ";
+@import '~bootstrap/scss/bootstrap';
 
 a {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
-.card {
-    width: 400px;
+.card :hover {
+    color: white !important;
 }
+
+a :hover {
+    color: white !important;
+}
+
+// .card {
+//     width: 400px;
+// }

@@ -1,12 +1,11 @@
 @extends('base')
 @section('pageTitle')
-Comics
+    Comics
 @endsection
 
 
 
 @section('pageMain')
-    
     {{-- <table class="table">
     <thead>
       <tr>
@@ -40,21 +39,25 @@ Comics
 
     </tbody>
     </table> --}}
-
-    @foreach ($myComics as $comic)
-    <a href="{{route('comic.show', $comic->id)}}">
-        <div class="card">   
-            <img class="img" src="{{$comic->thumb}}" alt="{{$comic->title}}">
-            <div class="card-title">
-            <h2>{{ $comic->title }}</h2>
-            <p>{{ $comic->description }}</p>
-            <h3>{{ $comic->price }}</h3>
-            <h3>{{ $comic->series }}</h3>
-            <h3>{{ $comic->sale_date }}</h3>
-            <h3>{{ $comic->type }}</h3>
+    <div class="container">
+        <div class="row">
+            @foreach ($myComics as $comic)
+                <div class="card col-5 m-5 bg-primary">
+                    <a href="{{ route('comic.show', $comic->id) }}">
+                        <div class="witdh-100 text-center">
+                            <img class="img" src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
+                        </div>
+                        <div class="card-title">
+                            <h2>{{ $comic->title }}</h2>
+                            <p>{{ $comic->description }}</p>
+                            <h3>{{ $comic->price }}$</h3>
+                            <h3>{{ $comic->series }}</h3>
+                            <h3>{{ $comic->sale_date }}</h3>
+                            <h3>{{ $comic->type }}</h3>
+                        </div>
+                    </a>
+                </div>
+            @endforeach
         </div>
-        </div> 
-    </a>
-    @endforeach
+    </div>
 @endsection
-
