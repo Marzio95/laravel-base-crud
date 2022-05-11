@@ -48,7 +48,7 @@
                         <div class="witdh-100 text-center">
                             <img class="img" src="{{ $comic->thumb }}" alt="{{ $comic->title }}">
                         </div>
-                        <div class="card-title">
+                        <div class="card-title text-center">
                             <h2>{{ $comic->title }}</h2>
                             <p>{{ $comic->description }}</p>
                             <h3>{{ $comic->price }}$</h3>
