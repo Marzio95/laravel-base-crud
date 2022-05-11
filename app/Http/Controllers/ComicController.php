@@ -42,7 +42,7 @@ class ComicController extends Controller
     {
         $formData = $request->all();
         $newComic = Comic::create($formData);
-        return redirect()->route('show', $newComic->id);
+        return redirect()->route('comic.show', $newComic->id);
     }
 
     /**
