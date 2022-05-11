@@ -28,7 +28,8 @@ class ComicController extends Controller
      */
     public function create()
     {
-        //
+        return view('create');
+        //in questa funzione inserisco la view del blade del Form
     }
 
     /**
@@ -39,7 +40,9 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $formData = $request->all();
+        $newComic = Comic::create($formData);
+        return redirect()->route('show', $newComic->id);
     }
 
     /**
