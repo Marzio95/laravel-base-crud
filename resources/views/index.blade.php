@@ -40,6 +40,7 @@
     </tbody>
     </table> --}}
     <div class="container">
+        <button><a href="{{ route('create') }}">Crea un nuovo comic</a></button>
         <div class="row">
             @foreach ($myComics as $comic)
                 <div class="card col-5 m-5 bg-primary">

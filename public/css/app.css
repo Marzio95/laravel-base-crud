@@ -12186,3 +12186,7 @@ a :hover {
   color: white !important;
 }
 
+button a {
+  color: black;
+}
+
