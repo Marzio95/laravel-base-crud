@@ -7,16 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+    {{-- link allo script --}}
+    <script src="{{ asset('js/app.js') }}" defer></script>
     <title>@yield('pageTitle')</title>
 </head>
 
 <body>
 
-    @include('header')
+    @include('partials.header')
 
     @yield('pageMain')
 
-    @include('footer')
+    @include('partials.footer')
 
 </body>
 

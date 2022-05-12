@@ -1,6 +1,6 @@
-@extends('base')
+@extends('templates.base')
 @section('pageTitle')
-    Comics
+    Create Comics
 @endsection
 
 
@@ -29,7 +29,7 @@
         <div class="form-group row">
             <label for="price" class="col-sm-2 col-form-label">Prezzo</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control" id="price" placeholder="Prezzo" name="price">
+                <input type="number" class="form-control" id="price" placeholder="Prezzo" name="price">
             </div>
         </div>
         <div class="form-group row">

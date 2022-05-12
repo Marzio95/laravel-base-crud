@@ -18,7 +18,7 @@ class ComicController extends Controller
         $data = [
             'myComics' => $myComics,
         ];
-        return view('index', $data);
+        return view('comics.index', $data);
     }
 
     /**
@@ -28,7 +28,7 @@ class ComicController extends Controller
      */
     public function create()
     {
-        return view('create');
+        return view('comics.create');
         //in questa funzione inserisco la view del blade del Form
     }
 
@@ -53,7 +53,7 @@ class ComicController extends Controller
      */
     public function show(Comic $comic)
     {
-        return view('show', [
+        return view('comics.show', [
             'pageTitle' => $comic->title,
             'comic' => $comic,
         ]);

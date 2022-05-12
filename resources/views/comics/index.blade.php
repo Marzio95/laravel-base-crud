@@ -1,4 +1,4 @@
-@extends('base')
+@extends('templates.base')
 @section('pageTitle')
     Comics
 @endsection

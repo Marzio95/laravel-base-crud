@@ -1,4 +1,4 @@
-@extends('base')
+@extends('templates.base')
 
 @section('pageTitle', $pageTitle)
 
@@ -6,7 +6,7 @@
 
     <div class="m-auto text-center">
         <div class="card bg-primary m-auto col-4">
-            <a href="{{ route('comic.index', 'ComicController') }}">
+            <a href="{{ route('index', 'ComicController') }}">
                 <img src="{{ $comic->thumb }}" class="img" alt="...">
 
                 <div class="card-body">
