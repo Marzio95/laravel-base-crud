@@ -4,6 +4,7 @@
 
 @section('pageMain')
 
+
     <div class="m-auto text-center">
         <div class="card bg-primary m-auto col-4">
             <a href="{{ route('index', 'ComicController') }}">
@@ -20,7 +21,15 @@
 
                 </div>
             </a>
+            <form class="mb-2 mt-2" method="POST" action="{{ route('comic.destroy', $comic->id) }}">
+                @csrf
+                @method('DELETE')
+                <button class="bg-danger text-white p-2 mb-2">ELIMINA FUMETTO</button>
+            </form>
         </div>
+    </div>
+    <div class="text-center mt-4">
+        <a class="text-white bg-black p-2" href="{{ route('index', 'ComicController') }}">Torna alla lista</a>
     </div>
 
 @endsection

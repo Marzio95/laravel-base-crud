@@ -5,18 +5,23 @@ a {
     color: white;
 }
 
-.card :hover {
-    color: white !important;
+a:hover {
+    color: white;
 }
 
-a :hover {
-    color: white !important;
+.card {
+    color: white;
 }
 
 button a {
     color: black;
 }
 
-// .card {
-//     width: 400px;
-// }
+.tasto_show {
+    border: 1px solid black;
+    padding: 0.5rem;
+    background-color: goldenrod;
+    width: inherit;
+    margin: 0.5rem auto;
+    text-transform: uppercase;
+}
