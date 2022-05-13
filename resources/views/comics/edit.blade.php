@@ -6,7 +6,7 @@
 
 
 @section('pageMain')
-    <form method="POST" action="{{ route('comic.update', $comic->id) }}">
+    <form class="m-auto w-75 mt-4" method="POST" action="{{ route('comic.update', $comic->id) }}">
         @csrf
         @method('PUT')
         <div class="form-group row">
@@ -44,7 +44,7 @@
                     placeholder="Serie Fumetto" name="series">
             </div>
         </div>
-        <div class="form-group row">
+        <div class="form-group row mt-3 mb-3">
             <label for="sale_date">Data di uscita</label>
             <input value="{{ $comic->sale_date }}" type="date" id="sale_date" name="sale_date">
         </div>
@@ -55,9 +55,12 @@
                     placeholder="Genere Fumetto" name="type">
             </div>
         </div>
-        <div class="form-group row">
+        <div class="form-group row mt-5 d-flex">
             <div class="col-sm-10">
-                <button type="submit" class="btn btn-primary">AGGIUNGI FUMETTO</button>
+                <button type="submit" class="btn btn-primary">MODIFICA FUMETTO</button>
+            </div>
+            <div class="col-sm-10 mt-5">
+                <a class="text-white bg-black p-2" href="{{ url()->previous() }}">Torna indietro</a>
             </div>
         </div>
     </form>

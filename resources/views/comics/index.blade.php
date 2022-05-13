@@ -60,11 +60,14 @@
                     </div>
                     <a class="tasto_show" href="{{ route('comic.show', $comic->id) }}">Visualizza Fumetto</a>
                     <a class="tasto_show bg-black" href="{{ route('comic.edit', $comic->id) }}">Modifica Fumetto</a>
+
+                    {{-- FORM PER IL TASTO ELIMINA --}}
                     <form class="mb-2 mt-2" method="POST" action="{{ route('comic.destroy', $comic->id) }}">
                         @csrf
                         @method('DELETE')
                         <button class="bg-danger text-white p-2 mb-2">ELIMINA FUMETTO</button>
                     </form>
+
                 </div>
             @endforeach
         </div>

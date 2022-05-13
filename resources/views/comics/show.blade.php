@@ -21,6 +21,7 @@
 
                 </div>
             </a>
+            <a class="tasto_show bg-black" href="{{ route('comic.edit', $comic->id) }}">Modifica Fumetto</a>
             <form class="mb-2 mt-2" method="POST" action="{{ route('comic.destroy', $comic->id) }}">
                 @csrf
                 @method('DELETE')
