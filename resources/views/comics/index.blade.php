@@ -40,7 +40,10 @@
     </tbody>
     </table> --}}
     <div class="container">
-        <button><a href="{{ route('create') }}">Crea un nuovo comic</a></button>
+        <div class="text-center">
+            <button class="bg-primary text-white"><a class="bg-primary text-white" href="{{ route('create') }}">Crea un
+                    nuovo comic</a></button>
+        </div>
         <div class="row">
             @foreach ($myComics as $comic)
                 <div class="card col-5 m-5 bg-primary text-center">
@@ -56,6 +59,7 @@
                         <h3>{{ $comic->type }}</h3>
                     </div>
                     <a class="tasto_show" href="{{ route('comic.show', $comic->id) }}">Visualizza Fumetto</a>
+                    <a class="tasto_show bg-black" href="{{ route('comic.edit', $comic->id) }}">Modifica Fumetto</a>
                     <form class="mb-2 mt-2" method="POST" action="{{ route('comic.destroy', $comic->id) }}">
                         @csrf
                         @method('DELETE')
@@ -64,5 +68,8 @@
                 </div>
             @endforeach
         </div>
+    </div>
+    <div class="text-center d-flex justify-content-center">
+        {{ $myComics->links() }}
     </div>
 @endsection

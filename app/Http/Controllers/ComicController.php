@@ -14,7 +14,7 @@ class ComicController extends Controller
      */
     public function index()
     {
-        $myComics = Comic::all();
+        $myComics = Comic::paginate('6');
         $data = [
             'myComics' => $myComics,
         ];
@@ -67,7 +67,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        return view('comics.edit', compact('comic'));
     }
 
     /**
@@ -79,7 +79,9 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        //
+        $formData = $request->all();
+        $comic->update($formData);
+        return redirect()->route('comic.show', $comic->id);
     }
 
     /**
