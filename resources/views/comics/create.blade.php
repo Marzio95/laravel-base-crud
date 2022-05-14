@@ -81,7 +81,7 @@
                 <button type="submit" class="btn btn-primary">Sign in</button>
             </div>
             <div class="col-sm-10 mt-5">
-                <a class="text-white bg-black p-2" href="{{ route('index', 'ComicController') }}">Torna alla lista</a>
+                <a class="text-white bg-black p-2" href="{{ url()->previous() }}">Torna alla lista</a>
             </div>
         </div>
         @if ($errors->any())
