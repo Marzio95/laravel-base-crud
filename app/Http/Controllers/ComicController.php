@@ -114,5 +114,7 @@ class ComicController extends Controller
     {
         $comic->delete();
         return redirect()->route('index');
+        // return back();
+        // return back nn funziona nello show.blade.php quindi bisogna utilizzare il redirect
     }
 }

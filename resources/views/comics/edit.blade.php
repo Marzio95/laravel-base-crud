@@ -12,8 +12,8 @@
         <div class="form-group row">
             <label for="title" class="col-sm-2 col-form-label">Title</label>
             <div class="col-sm-10">
-                <input value="{{ $comic->title }}" type="text" class="form-control" id="title" placeholder="Title"
-                    name="title">
+                <input value="{{ old('title', $comic->title) }}" type="text" class="form-control" id="title"
+                    placeholder="Title" name="title">
                 @error('title')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
@@ -22,8 +22,8 @@
         <div class="form-group row">
             <label for="description" class="col-sm-2 col-form-label">Description</label>
             <div class="col-sm-10">
-                <input value="{{ $comic->description }}" type="text" class="form-control" id="description"
-                    placeholder="Description" name="description">
+                <input value="{{ old('description', $comic->description) }}" type="text" class="form-control"
+                    id="description" placeholder="Description" name="description">
                 @error('description')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
@@ -32,8 +32,8 @@
         <div class="form-group row">
             <label for="thumb" class="col-sm-2 col-form-label">Foto Comic</label>
             <div class="col-sm-10">
-                <input value="{{ $comic->thumb }}" type="text" class="form-control" id="thumb" placeholder="Foto Comic"
-                    name="thumb">
+                <input value="{{ old('thumb', $comic->thumb) }}" type="text" class="form-control" id="thumb"
+                    placeholder="Foto Comic" name="thumb">
                 @error('thumb')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
@@ -42,8 +42,8 @@
         <div class="form-group row">
             <label for="price" class="col-sm-2 col-form-label">Prezzo</label>
             <div class="col-sm-10">
-                <input value="{{ $comic->price }}" type="number" class="form-control" id="price" placeholder="Prezzo"
-                    name="price">
+                <input value="{{ old('price', $comic->price) }}" type="number" class="form-control" id="price"
+                    placeholder="Prezzo" name="price">
                 @error('price')
                     <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
@@ -52,7 +52,7 @@
         <div class="form-group row">
             <label for="series" class="col-sm-2 col-form-label">Serie Fumetto</label>
             <div class="col-sm-10">
-                <input value="{{ $comic->series }}" type="text" class="form-control" id="series"
+                <input value="{{ old('series', $comic->series) }}" type="text" class="form-control" id="series"
                     placeholder="Serie Fumetto" name="series">
                 @error('series')
                     <div class="alert alert-danger">{{ $message }}</div>
@@ -61,7 +61,7 @@
         </div>
         <div class="form-group row mt-3 mb-3">
             <label for="sale_date">Data di uscita</label>
-            <input value="{{ $comic->sale_date }}" type="date" id="sale_date" name="sale_date">
+            <input value="{{ old('sale_date', $comic->sale_date) }}" type="date" id="sale_date" name="sale_date">
             @error('sale_date')
                 <div class="alert alert-danger">{{ $message }}</div>
             @enderror
@@ -69,7 +69,7 @@
         <div class="form-group row">
             <label for="type" class="col-sm-2 col-form-label">Genere Fumetto</label>
             <div class="col-sm-10">
-                <input value="{{ $comic->type }}" type="text" class="form-control" id="type"
+                <input value="{{ old('type', $comic->type) }}" type="text" class="form-control" id="type"
                     placeholder="Genere Fumetto" name="type">
                 @error('type')
                     <div class="alert alert-danger">{{ $message }}</div>
