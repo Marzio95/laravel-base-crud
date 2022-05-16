@@ -25,3 +25,34 @@ button a {
     margin: 0.5rem auto;
     text-transform: uppercase;
 }
+
+.overlay {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1312;
+    background-color: white;
+}  
+.popup {
+    background-color: lightgray;
+    width: 650px;
+    height: 300px;
+    padding: 1rem;
+    border: 1px solid black;
+    text-align: center;
+    padding-top: 3rem;
+}
+
+#btn-no {
+    width: 120px;
+    border: 2px solid black;
+    color: white;
+    border-radius: 0 !important;
+}
+
+.btn-delete {
+    width: inherit;
+    text-align: center;
+    margin: 0.5rem auto;
+}

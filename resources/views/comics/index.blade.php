@@ -62,11 +62,14 @@
                     <a class="tasto_show bg-black" href="{{ route('comic.edit', $comic->id) }}">Modifica Fumetto</a>
 
                     {{-- FORM PER IL TASTO ELIMINA --}}
-                    <form class="mb-2 mt-2" method="POST" action="{{ route('comic.destroy', $comic->id) }}">
+                    {{-- <form class="mb-2 mt-2" method="POST" action="{{ route('comic.destroy', $comic->id) }}">
                         @csrf
                         @method('DELETE')
                         <button class="bg-danger text-white p-2 mb-2">ELIMINA FUMETTO</button>
-                    </form>
+                    </form> --}}
+                    <button data-id="{{ $comic->id }}" class="bg-danger text-white p-2 mb-2 btn-delete">ELIMINA
+                        FUMETTO
+                    </button>
 
                 </div>
             @endforeach
@@ -75,4 +78,19 @@
     <div class="text-center d-flex justify-content-center">
         {{ $myComics->links() }}
     </div>
+
+    <section id="confirmation-overlay" class="overlay d-none">
+        <div class="popup">
+            <h2>Se continui l'elemento verrà eliminato</h2>
+            <div class="d-flex justify-content-evenly mt-5">
+                <form method="POST" data-base="{{ route('comic.index') }}">
+                    @csrf
+                    @method('DELETE')
+                    <button class="bg-danger text-white p-2 ">ELIMINA FUMETTO</button>
+                </form>
+                <button id="btn-no" class="btn bg-primary">NO</button>
+            </div>
+        </div>
+
+    </section>
 @endsection

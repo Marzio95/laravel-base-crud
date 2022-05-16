@@ -22,15 +22,28 @@
                 </div>
             </a>
             <a class="tasto_show bg-black" href="{{ route('comic.edit', $comic->id) }}">Modifica Fumetto</a>
-            <form class="mb-2 mt-2" method="POST" action="{{ route('comic.destroy', $comic->id) }}">
-                @csrf
-                @method('DELETE')
-                <button class="bg-danger text-white p-2 mb-2">ELIMINA FUMETTO</button>
-            </form>
+            <button data-id="{{ $comic->id }}" class="bg-danger text-white p-2 mb-2 btn-delete">ELIMINA
+                FUMETTO
+            </button>
         </div>
     </div>
     <div class="text-center mt-4">
         <a class="text-white bg-black p-2" href="{{ route('index', 'ComicController') }}">Torna alla lista</a>
     </div>
+
+    <section id="confirmation-overlay" class="overlay d-none">
+        <div class="popup">
+            <h2>Se continui l'elemento verrà eliminato</h2>
+            <div class="d-flex justify-content-evenly mt-5">
+                <form method="POST" data-base="{{ route('comic.index') }}">
+                    @csrf
+                    @method('DELETE')
+                    <button class="bg-danger text-white p-2 ">ELIMINA FUMETTO</button>
+                </form>
+                <button id="btn-no" class="btn bg-primary">NO</button>
+            </div>
+        </div>
+
+    </section>
 
 @endsection
