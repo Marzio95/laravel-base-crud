@@ -22,7 +22,8 @@
                 </div>
             </a>
             <a class="tasto_show bg-black" href="{{ route('comic.edit', $comic->id) }}">Modifica Fumetto</a>
-            <button data-id="{{ $comic->id }}" class="bg-danger text-white p-2 mb-2 btn-delete">ELIMINA
+            <button onclick="event.stopPropagation()" data-id="{{ $comic->id }}"
+                class="bg-danger text-white p-2 mb-2 btn-delete">ELIMINA
                 FUMETTO
             </button>
         </div>
@@ -38,7 +39,7 @@
                 <form method="POST" data-base="{{ route('comic.index') }}">
                     @csrf
                     @method('DELETE')
-                    <button class="bg-danger text-white p-2 ">ELIMINA FUMETTO</button>
+                    <button onclick="event.stopPropagation()" class="bg-danger text-white p-2 ">ELIMINA FUMETTO</button>
                 </form>
                 <button id="btn-no" class="btn bg-primary">NO</button>
             </div>

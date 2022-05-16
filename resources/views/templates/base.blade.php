@@ -13,7 +13,7 @@
     <title>@yield('pageTitle')</title>
 </head>
 
-<body>
+<body class="body">
 
     @include('partials.header')
 

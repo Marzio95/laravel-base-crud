@@ -27611,7 +27611,7 @@ document.querySelectorAll('.btn-delete').forEach(function (element) {
     confirmationForm.action = confirmationForm.dataset.base + '/' + this.dataset.id;
   });
 });
-document.getElementById('btn-no').addEventListener('click', function () {
+document.querySelector('.body').addEventListener('click', function () {
   confirmationForm.action = '';
   confirmationOverlay.classList.add('d-none');
 });

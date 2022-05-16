@@ -11,7 +11,7 @@ document.querySelectorAll('.btn-delete').forEach(element=> {
     });
 });
 
-document.getElementById('btn-no').addEventListener('click', function() {
+document.querySelector('.body').addEventListener('click', function() {
     confirmationForm.action = '';
     confirmationOverlay.classList.add('d-none');
-})
+});
